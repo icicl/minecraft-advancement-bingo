@@ -1,0 +1,499 @@
+furnace-speed: 4 # speed of furnace. use 1 for default behavior (x1 speed)
+initial-reward-base: 20 # the number of points each objective initially rewards
+initial-reward-per-player: 4 # how many points the starting value of each objective is increased by for each player (including the first one) - score is set on /bingo start, so players that join after the game starts will not increase the score.
+initial-decrement: 8 # how much the reward for and item is decreased by the first time a player finds it
+subsequent-decrement: 4 # how much the reward decreases by on each find other than the first
+reward-decrease-interval: 300 # how many seconds between each time the rewards for all items are decreased
+reward-decrease-amount: 1 # by how many points the rewards are decreased
+bingo-set-score-to-zero: false # whether other player will no longer gain points on finding items in your bingo
+bingo-bonus-static: 0 # how many bonus points a bingo will award, regardless of how many points you received for said bingo's items
+bingo-bonus-multiplier: 1.0 # how much items in a bingo are multiplied by, will round score increase to int. this is the BONUS, so a value of 0 means
+# that no dynamic bonus will be given for bingos, and a value of 2 means that all the items in a bingo will award triple points.
+initial-items-unbreakable: # players will be given these items at the start of the game, and every time they respawn.
+  iron_pickaxe:
+    enchant: minecraft:fortune
+    level: 3
+  iron_axe:
+    enchant: minecraft:looting
+    level: 3
+  iron_shovel:
+    enchant: none
+initial-items: # players will also be given the specified amount of these items at the start of the game, and when they respawn.
+  golden_carrot: 64
+
+advancements:
+  adventure/adventuring_time:
+    weight: [0, 1]
+    title: Adventuring Time
+    desc: Discover every biome
+    icon: minecraft:diamond_boots
+  adventure/arbalistic:
+    weight: [0, 3]
+    title: Arbalistic
+    desc: Kill five unique mobs with one crossbow shot
+    icon: minecraft:crossbow
+  adventure/bullseye:
+    weight: [4, 4]
+    title: Bullseye
+    desc: Hit the bullseye of a Target block from at least 30 meters away
+    icon: minecraft:target
+  adventure/fall_from_world_height:
+    weight: [4, 4]
+    title: Caves & Cliffs
+    desc: Free fall from the top of the world (build limit) to the bottom of the world and survive
+    icon: minecraft:water_bucket
+  adventure/hero_of_the_village:
+    weight: [1, 2]
+    title: Hero of the Village
+    desc: Successfully defend a village from a raid
+    icon: minecraft:white_banner
+  adventure/honey_block_slide:
+    weight: [2, 2]
+    title: Sticky Situation
+    desc: Jump into a Honey Block to break your fall
+    icon: minecraft:honey_block
+  adventure/kill_all_mobs:
+    weight: [0, 1]
+    title: Monsters Hunted
+    desc: Kill one of every hostile monster
+    icon: minecraft:diamond_sword
+  adventure/kill_a_mob:
+    weight: [6, 2]
+    title: Monster Hunter
+    desc: Kill any hostile monster
+    icon: minecraft:iron_sword
+  adventure/lightning_rod_with_villager_no_fire:
+    weight: [1, 3]
+    title: Surge Protector
+    desc: Protect a villager from an undesired shock without starting a fire
+    icon: minecraft:lightning_rod
+  adventure/ol_betsy:
+    weight: [3, 3]
+    title: Ol' Betsy
+    desc: Shoot a crossbow
+    icon: minecraft:crossbow
+  adventure/play_jukebox_in_meadows:
+    weight: [1, 4]
+    title: Sound of Music
+    desc: Make the Meadows come alive with the sound of music from a jukebox
+    icon: minecraft:jukebox
+  adventure/root:
+    weight: [0, 0]
+    title: Adventure
+    desc: Adventure, exploration and combat
+    icon: minecraft:map
+  adventure/shoot_arrow:
+    weight: [5, 2]
+    title: Take Aim
+    desc: Shoot something with an arrow
+    icon: minecraft:bow
+  adventure/sleep_in_bed:
+    weight: [3, 3]
+    title: Sweet Dreams
+    desc: Sleep in a bed to change your respawn point
+    icon: minecraft:red_bed
+  adventure/sniper_duel:
+    weight: [1, 4]
+    title: Sniper Duel
+    desc: Kill a Skeleton from at least 50 meters away
+    icon: minecraft:arrow
+  adventure/spyglass_at_dragon:
+    weight: [0, 3]
+    title: Is It a Plane?
+    desc: Look at the Ender Dragon through a spyglass
+    icon: minecraft:spyglass
+  adventure/spyglass_at_ghast:
+    weight: [2, 3]
+    title: Is It a Balloon?
+    desc: Look at a ghast through a spyglass
+    icon: minecraft:spyglass
+  adventure/spyglass_at_parrot:
+    weight: [2, 2]
+    title: Is It a Bird?
+    desc: Look at a parrot through a spyglass
+    icon: minecraft:spyglass
+  adventure/summon_iron_golem:
+    weight: [1, 3]
+    title: Hired Help
+    desc: Summon an Iron Golem to help defend a village
+    icon: minecraft:carved_pumpkin
+  adventure/throw_trident:
+    weight: [1, 3]
+    title: A Throwaway Joke
+    desc: Throw a trident at something.
+    icon: minecraft:trident
+  adventure/totem_of_undying:
+    weight: [0, 4]
+    title: Postmortal
+    desc: Use a Totem of Undying to cheat death
+    icon: minecraft:totem_of_undying
+  adventure/trade:
+    weight: [2, 3]
+    title: What a Deal!
+    desc: Successfully trade with a Villager
+    icon: minecraft:emerald
+  adventure/trade_at_world_height:
+    weight: [1, 3]
+    title: Star Trader
+    desc: Trade with a villager at the build height limit
+    icon: minecraft:emerald
+  adventure/two_birds_one_arrow:
+    weight: [0, 3]
+    title: Two Birds, One Arrow
+    desc: Kill two Phantoms with a piercing arrow
+    icon: minecraft:crossbow
+  adventure/very_very_frightening:
+    weight: [0, 3]
+    title: Very Very Frightening
+    desc: Strike a Villager with lightning
+    icon: minecraft:trident
+  adventure/voluntary_exile:
+    weight: [2, 2]
+    title: Voluntary Exile
+    desc: Kill a raid captain.
+    icon: minecraft:white_banner
+  adventure/walk_on_powder_snow_with_leather_boots:
+    weight: [2, 3]
+    title: Light as a Rabbit
+    desc: Walk on powder snow...without sinking in it
+    icon: minecraft:leather_boots
+  adventure/whos_the_pillager_now:
+    weight: [2, 3]
+    title: Who's the Pillager Now?
+    desc: Give a Pillager a taste of their own medicine
+    icon: minecraft:crossbow
+  end/dragon_breath:
+    weight: [0, 3]
+    title: You Need a Mint
+    desc: Collect dragon's breath in a glass bottle
+    icon: minecraft:dragon_breath
+  end/dragon_egg:
+    weight: [0, 2]
+    title: The Next Generation
+    desc: Hold the Dragon Egg
+    icon: minecraft:dragon_egg
+  end/elytra:
+    weight: [0, 3]
+    title: Sky's the Limit
+    desc: Find elytra
+    icon: minecraft:elytra
+  end/enter_end_gateway:
+    weight: [0, 3]
+    title: Remote Getaway
+    desc: Escape the island
+    icon: minecraft:ender_pearl
+  end/find_end_city:
+    weight: [0, 2]
+    title: The City at the End of the Game
+    desc: Go on in, what could happen?
+    icon: minecraft:purpur_block
+  end/kill_dragon:
+    weight: [0,3]
+    title: Free the End
+    desc: Good luck
+    icon: minecraft:dragon_head
+  end/levitate:
+    weight: [0, 2]
+    title: Great View From Up Here
+    desc: Levitate up 50 blocks from the attacks of a Shulker
+    icon: minecraft:shulker_shell
+  end/respawn_dragon:
+    weight: [0, 3]
+    title: The End... Again...
+    desc: Respawn the Ender Dragon
+    icon: minecraft:end_crystal
+  end/root:
+    weight: [0, 0]
+    title: The End
+    desc: Or the beginning?
+    icon: minecraft:end_stone
+  husbandry/axolotl_in_a_bucket:
+    weight: [0, 2]
+    title: The Cutest Predator
+    desc: Catch an axolotl in a bucket
+    icon: minecraft:axolotl_bucket
+  husbandry/balanced_diet:
+    weight: [0, 1]
+    title: A Balanced Diet
+    desc: Eat everything that is edible, even if it's not good for you
+    icon: minecraft:apple
+  husbandry/bred_all_animals:
+    weight: [0, 1]
+    title: Two by Two
+    desc: Breed all the animals!
+    icon: minecraft:golden_carrot
+  husbandry/breed_an_animal:
+    weight: [4, 2]
+    title: The Parrots and the Bats
+    desc: Breed two animals together
+    icon: minecraft:wheat
+  husbandry/complete_catalogue:
+    weight: [0, 1]
+    title: A Complete Catalogue
+    desc: Tame all cat variants!
+    icon: minecraft:cod
+  husbandry/fishy_business:
+    weight: [2, 2]
+    title: Fishy Business
+    desc: Catch a fish
+    icon: minecraft:fishing_rod
+  husbandry/kill_axolotl_target:
+    weight: [0, 3]
+    title: The Healing Power of Friendship!
+    desc: Team up with an axolotl and win a fight
+    icon: minecraft:tropical_fish_bucket
+  husbandry/make_a_sign_glow:
+    weight: [2, 2]
+    title: Glow and Behold!
+    desc: Make the text of a sign glow
+    icon: minecraft:glow_ink_sac
+  husbandry/obtain_netherite_hoe:
+    weight: [0, 2]
+    title: Serious Dedication
+    desc: Use a Netherite ingot to upgrade a hoe, and then reevaluate your life choices
+    icon: minecraft:netherite_hoe
+  husbandry/plant_seed:
+    weight: [4, 2]
+    title: A Seedy Place
+    desc: Plant a seed and watch it grow
+    icon: minecraft:wheat
+  husbandry/ride_a_boat_with_a_goat:
+    weight: [1, 3]
+    title: Whatever Floats Your Goat!
+    desc: Get in a Boat and float with a Goat
+    icon: minecraft:oak_boat
+  husbandry/root:
+    weight: [0, 0]
+    title: Husbandry
+    desc: The world is full of friends and food
+    icon: minecraft:hay_block
+  husbandry/safely_harvest_honey:
+    weight: [1, 3]
+    title: Bee Our Guest
+    desc: Use a Campfire to collect Honey from a Beehive using a Bottle without aggravating the bees
+    icon: minecraft:honey_bottle
+  husbandry/silk_touch_nest:
+    weight: [0, 3]
+    title: Total Beelocation
+    desc: Move a Bee Nest, with 3 bees inside, using Silk Touch
+    icon: minecraft:bee_nest
+  husbandry/tactical_fishing:
+    weight: [3, 2]
+    title: Tactical Fishing
+    desc: Catch a fish... without a fishing rod!
+    icon: minecraft:pufferfish_bucket
+  husbandry/tame_an_animal:
+    weight: [5, 2]
+    title: Best Friends Forever
+    desc: Tame an animal
+    icon: minecraft:lead
+  husbandry/wax_off:
+    weight: [2, 3]
+    title: Wax Off
+    desc: Scrape Wax off of a Copper block!
+    icon: minecraft:stone_axe
+  husbandry/wax_on:
+    weight: [2, 3]
+    title: Wax On
+    desc: Apply Honeycomb to a Copper block!
+    icon: minecraft:honeycomb
+  nether/all_effects:
+    weight: [0, 1]
+    title: How Did We Get Here?
+    desc: Have every effect applied at the same time
+    icon: minecraft:bucket
+  nether/all_potions:
+    weight: [0, 2]
+    title: A Furious Cocktail
+    desc: Have every potion effect applied at the same time
+    icon: minecraft:milk_bucket
+  nether/brew_potion:
+    weight: [1, 4]
+    title: Local Brewery
+    desc: Brew a potion
+    icon: minecraft:potion
+  nether/charge_respawn_anchor:
+    weight: [1, 3]
+    title: Not Quite "Nine" Lives
+    desc: Charge a Respawn Anchor to the maximum
+    icon: minecraft:respawn_anchor
+  nether/create_beacon:
+    weight: [0, 2]
+    title: Bring Home the Beacon
+    desc: Construct and place a beacon
+    icon: minecraft:beacon
+  nether/create_full_beacon:
+    weight: [0, 1]
+    title: Beaconator
+    desc: Bring a beacon to full power
+    icon: minecraft:beacon
+  nether/distract_piglin:
+    weight: [2, 4]
+    title: Oh Shiny
+    desc: Distract Piglins with gold
+    icon: minecraft:gold_ingot
+  nether/explore_nether:
+    weight: [1, 3]
+    title: Hot Tourist Destinations
+    desc: Explore all Nether biomes
+    icon: minecraft:netherite_boots
+  nether/fast_travel:
+    weight: [1, 4]
+    title: Subspace Bubble
+    desc: Use the Nether to travel 7 km in the Overworld
+    icon: minecraft:map
+  nether/find_bastion:
+    weight: [0, 3]
+    title: Those Were the Days
+    desc: Enter a Bastion Remnant
+    icon: minecraft:polished_blackstone_bricks
+  nether/find_fortress:
+    weight: [0, 3]
+    title: A Terrible Fortress
+    desc: Break your way into a Nether Fortress
+    icon: minecraft:nether_bricks
+  nether/get_wither_skull:
+    weight: [0, 2]
+    title: Spooky Scary Skeleton
+    desc: Obtain a Wither Skeleton's skull
+    icon: minecraft:wither_skeleton_skull
+  nether/loot_bastion:
+    weight: [0, 2]
+    title: War Pigs
+    desc: Loot a chest in a Bastion Remnant
+    icon: minecraft:chest
+  nether/netherite_armor:
+    weight: [0, 2]
+    title: Cover Me in Debris
+    desc: Get a full suit of Netherite armor
+    icon: minecraft:netherite_chestplate
+  nether/obtain_ancient_debris:
+    weight: [1, 4]
+    title: Hidden in the Depths
+    desc: Obtain Ancient Debris
+    icon: minecraft:ancient_debris
+  nether/obtain_blaze_rod:
+    weight: [0, 3]
+    title: Into Fire
+    desc: Relieve a Blaze of its rod
+    icon: minecraft:blaze_rod
+  nether/obtain_crying_obsidian:
+    weight: [1, 3]
+    title: Who is Cutting Onions?
+    desc: Obtain Crying Obsidian
+    icon: minecraft:crying_obsidian
+  nether/return_to_sender:
+    weight: [1, 4]
+    title: Return to Sender
+    desc: Destroy a Ghast with a fireball
+    icon: minecraft:fire_charge
+  nether/ride_strider:
+    weight: [0, 3]
+    title: This Boat Has Legs
+    desc: Ride a Strider with a Warped Fungus on a Stick
+    icon: minecraft:warped_fungus_on_a_stick
+  nether/ride_strider_in_overworld_lava:
+    weight: [0, 2]
+    title: Feels like home
+    desc: Take a Strider for a loooong ride on a lava lake in the Overworld
+    icon: minecraft:warped_fungus_on_a_stick
+  nether/root:
+    weight: [0, 0]
+    title: Nether
+    desc: Bring summer clothes
+    icon: minecraft:red_nether_bricks
+  nether/summon_wither:
+    weight: [0, 2]
+    title: Withering Heights
+    desc: Summon the Wither
+    icon: minecraft:nether_star
+  nether/uneasy_alliance:
+    weight: [0, 2]
+    title: Uneasy Alliance
+    desc: Rescue a Ghast from the Nether, bring it safely home to the Overworld... and then kill it
+    icon: minecraft:ghast_tear
+  nether/use_lodestone:
+    weight: [0, 3]
+    title: Country Lode, Take Me Home
+    desc: Use a compass on a Lodestone
+    icon: minecraft:lodestone
+  story/cure_zombie_villager:
+    weight: [0, 2]
+    title: Zombie Doctor
+    desc: Weaken and then cure a Zombie Villager
+    icon: minecraft:golden_apple
+  story/deflect_arrow:
+    weight: [4, 2]
+    title: Not Today, Thank You
+    desc: Deflect a projectile with a shield
+    icon: minecraft:shield
+  story/enchant_item:
+    weight: [2, 3]
+    title: Enchanter
+    desc: Enchant an item at an Enchanting Table
+    icon: minecraft:enchanted_book
+  story/enter_the_end:
+    weight: [0, 5]
+    title: The End?
+    desc: Enter the End Portal
+    icon: minecraft:end_stone
+  story/enter_the_nether:
+    weight: [2, 4]
+    title: We Need to Go Deeper
+    desc: Build, light and enter a Nether Portal
+    icon: minecraft:flint_and_steel
+  story/follow_ender_eye:
+    weight: [1, 3]
+    title: Eye Spy
+    desc: Follow an Eye of Ender
+    icon: minecraft:ender_eye
+  story/form_obsidian:
+    weight: [3, 2]
+    title: Ice Bucket Challenge
+    desc: Obtain a block of obsidian
+    icon: minecraft:obsidian
+  story/iron_tools:
+    weight: [4, 2]
+    title: Isn't It Iron Pick
+    desc: Upgrade your pickaxe
+    icon: minecraft:iron_pickaxe
+  story/lava_bucket:
+    weight: [4, 2]
+    title: Hot Stuff
+    desc: Fill a bucket with lava
+    icon: minecraft:lava_bucket
+  story/mine_diamond:
+    weight: [3, 3]
+    title: Diamonds!
+    desc: Acquire diamonds
+    icon: minecraft:diamond
+  story/mine_stone:
+    weight: [3, 0]
+    title: Stone Age
+    desc: Mine stone with your new pickaxe
+    icon: minecraft:wooden_pickaxe
+  story/obtain_armor:
+    weight: [4, 1]
+    title: Suit Up
+    desc: Protect yourself with a piece of iron armor
+    icon: minecraft:iron_chestplate
+  story/root:
+    weight: [0, 0]
+    title: Minecraft
+    desc: The heart and story of the game
+    icon: minecraft:grass_block
+  story/shiny_gear:
+    weight: [1, 4]
+    title: Cover Me with Diamonds
+    desc: Diamond armor saves lives
+    icon: minecraft:diamond_chestplate
+  story/smelt_iron:
+    weight: [4, 2]
+    title: Acquire Hardware
+    desc: Smelt an iron ingot
+    icon: minecraft:iron_ingot
+  story/upgrade_tools:
+    weight: [3, 1]
+    title: Getting an Upgrade
+    desc: Construct a better pickaxe
+    icon: minecraft:stone_pickaxe

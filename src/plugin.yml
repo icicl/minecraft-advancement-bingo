@@ -1,0 +1,10 @@
+name: Overachiever # the name of the plugin.
+version: 1.0.0 # the version of the plugin.
+main: Main # the main class of the plugin.
+author: icicl
+api-version: 1.13
+#load: startup
+commands:
+  adv:
+    description: Play advancement bingo.
+    usage: /<command> [new][join][start][map][goals]
